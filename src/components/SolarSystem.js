@@ -1,9 +1,8 @@
 import React from 'react';
-import '../App.css';
 import planets from '../data/planets';
 import Title from './Title';
 import PlanetCard from './PlanetCard';
-import Missions from './Missions';
+import '../App.css';
 
 class SolarSystem extends React.Component {
   render() {
@@ -12,14 +11,13 @@ class SolarSystem extends React.Component {
         <Title headline="Planetas" />
 
         <div className="planets-container">
-          {planets.map(({ name, image }, index) => (<PlanetCard
+          { planets.map(({ name, image }, index) => (<PlanetCard
             key={ index }
             planetName={ name }
             planetImage={ image }
-          />))}
+          />)) }
         </div>
 
-        <Missions />
       </div>
     );
   }
